@@ -10,8 +10,8 @@ public class MessageEncoder extends MessageToByteEncoder<Message> {
 
     @Override
     protected void encode(ChannelHandlerContext ctx, Message msg, ByteBuf out) throws Exception {
-        out.writeInt(msg.getType().length());
-        out.writeCharSequence(msg.getType(), StandardCharsets.UTF_8);
+        out.writeInt(msg.getFileName().length());
+        out.writeCharSequence(msg.getFileName(), StandardCharsets.UTF_8);
         out.writeInt(msg.getLength());
         out.writeBytes(msg.getData());
     }
