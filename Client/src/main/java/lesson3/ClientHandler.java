@@ -19,6 +19,6 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         String response = (String) msg;
-        System.out.println("response = " + response);
+        System.out.println("response> file received = " + response);
     }
 }

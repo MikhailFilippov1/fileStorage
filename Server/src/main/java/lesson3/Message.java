@@ -17,11 +17,11 @@ public class Message {
         this.data = data;
     }
 
-    public String getType() {
+    public String getFileName() {
         return fileName;
     }
 
-    public void setType(String fileName) {
+    public void setFileName(String fileName) {
         this.fileName = fileName;
     }
 

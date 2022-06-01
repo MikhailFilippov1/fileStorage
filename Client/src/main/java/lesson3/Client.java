@@ -30,7 +30,7 @@ public class Client {
     }
 
     public static void main(String[] args) throws Exception {
-//        Message message = new Message("test.txt", 5, new byte[]{1, 2, 3, 4, 5});
+//        Message message = new Message("test1.txt", 5, new byte[]{1, 2, 3, 4, 5});
 
         // При старте Client обрабатывает тестовый файл и отсылает его на сервер.
         // Мне кажется, это лучше делать в специальном методе. Посоветуйте, где его создать
@@ -42,13 +42,13 @@ public class Client {
 //        private static long fileSize;
 //        private static byte[] bytes;
 
-        File file = new File("Client/src/main/resources/test.txt");
+        File file = new File("Client/src/main/resources/test1.txt");
         if(file.exists()){
             fileName = file.getAbsolutePath();// имя файла
             System.out.println(fileName);
             fileSize = file.length();
             System.out.println(fileSize + " bytes");
-            bytes = Files.readAllBytes(Paths.get("Client/src/main/resources/test.txt"));
+            bytes = Files.readAllBytes(Paths.get("Client/src/main/resources/test1.txt"));
             String content = new String(bytes, StandardCharsets.UTF_8);
             System.out.println(content);
         }else System.out.println("File does not Exists!");

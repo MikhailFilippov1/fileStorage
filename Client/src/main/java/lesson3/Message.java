@@ -18,7 +18,7 @@ package lesson3;
             this.data = data;
         }
 
-        public String getType() {
+        public String getFileName() {
             return fileName;
         }
 
